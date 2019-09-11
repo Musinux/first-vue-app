@@ -30,7 +30,7 @@ export default {
     HelloWorld,
   },
   data: () => ({
-    //
+    // COUCOU
   }),
 };
 </script>
