@@ -1,29 +1,36 @@
-# first-app
+# my-nth-test-app
 
 ## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
+# in another terminal, in the project folder
+node server.js
 ```
 
-### Compiles and minifies for production
+installer Axios sur votre projet:
 ```
-npm run build
+npm install --save axios vue-axios
+```
+Ensuite ajoutez les lignes suivantes à votre fichier src/main.js:
+(regardez l'exemple dans le fichier correspondant de ce projet)
+```
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
 ```
 
-### Run your tests
+Ensuite, depuis n'importe quel composant (regardez l'exemple dans
+src/components/HelloWorld.vue):
 ```
-npm run test
+  this.axios.post('https://localhost:4000/votreAPI', {
+    data: {
+      sivousavezdeschamps: 'rentrez les ici'
+    }
+  })
+  .then((response) => {
+    console.log('response', response)
+  })
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
