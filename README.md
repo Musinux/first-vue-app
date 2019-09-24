@@ -3,9 +3,10 @@
 ## Project setup
 ```
 npm install
+npm install -g nodemon # (auto restart the server)
 npm run serve
 # in another terminal, in the project folder
-node server.js
+nodemon server.js
 ```
 
 installer Axios sur votre projet:
