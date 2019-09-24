@@ -45,7 +45,7 @@ export default {
   methods: {
     login () {
       // connecter l'utilisateur
-      this.axios.post('http://localhost:4000/api/login', {
+      this.axios.post('/api/login', {
         data: {
           login: 'louis',
           password: 'truc'
