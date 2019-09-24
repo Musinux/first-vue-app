@@ -2,6 +2,8 @@
  *
  * entrez la commande suivante:
  * npm install --save express express-session body-parser morgan cors
+ * puis node server.js
+ * exemple complet à l'adresse https://github.com/Musinux/first-vue-app
  */
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -20,6 +22,9 @@ app.use(session({
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(cors())
+
+const path = require('path')
+app.use(express.static(path.join(__dirname, '/dist')))
 
 const users = [{
   username: 'admin',
@@ -46,6 +51,10 @@ app.post('/api/login', (req, res) => {
     const user = users.find(u => u.username === req.body.username && u.password === req.body.password)
     if (!user) {
       // gérez le cas où on n'a pas trouvé d'utilisateur correspondant
+      res.status(401)
+      res.json({
+        message: 'error'
+      })
     } else {
       // connect the user
       req.session.userId = 1000 // connect the user, and change the id
