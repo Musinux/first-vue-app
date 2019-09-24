@@ -1,5 +1,8 @@
 # my-nth-test-app
 
+
+Allez regarder le fichier mise-en-prod.md pour les détails concernant la mise en prod
+
 ## Project setup
 ```
 npm install
