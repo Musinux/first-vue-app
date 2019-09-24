@@ -25,9 +25,7 @@ Ensuite, depuis n'importe quel composant (regardez l'exemple dans
 src/components/HelloWorld.vue):
 ```
   this.axios.post('https://localhost:4000/votreAPI', {
-    data: {
-      sivousavezdeschamps: 'rentrez les ici'
-    }
+    sivousavezdeschamps: 'rentrez les ici'
   })
   .then((response) => {
     console.log('response', response)
