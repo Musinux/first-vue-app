@@ -40,18 +40,17 @@ export default {
     valid: false,
     name: '',
     description: '',
-    todos: []
+    todos: [],
+    url: 'http://localhost:4000'
   }),
   methods: {
-    login () {
+    async login () {
       // connecter l'utilisateur
-      this.axios.post('/api/login', {
-        data: {
-          login: 'louis',
-          password: 'truc'
-        }
+      const response = await this.axios.post(this.url + '/api/login', {
+        login: 'admin',
+        password: 'changethispassword'
       })
-        .then(jsondata => console.log('response is:', jsondata))
+      console.log('response is:', response)
     },
     logout () {
     },

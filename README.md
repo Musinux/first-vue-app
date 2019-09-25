@@ -3,6 +3,28 @@
 
 Allez regarder le fichier mise-en-prod.md pour les détails concernant la mise en prod
 
+## Gestion des sessions lors du développement
+
+Pour des raisons de sécurité, par défaut, les cookies ne sont pas transmis pour les
+requêtes de type CORS. Pour que ceux-ci fonctionnent dans votre projet, vérifiez que vous
+avez bien deux éléments dans votre projet:
+
+Fichier src/main.js (regardez l'exemple dans le fichier de ce projet):
+```js
+// cette ligne est importante pour les sessions (en mode développement)
+axios.defaults.withCredentials = true
+```
+
+Fichier server.js (en remplacement de `app.use(cors())`, déplacé au dessus de
+`app.use(session({`, regardez l'exemple dans le fichier de ce projet)
+```js
+// ces lignes (cors) sont importantes pour les sessions dans la version de développement
+app.use(cors({
+  credentials: true,
+  origin: 'http://localhost:8080'
+}))
+```
+
 ## Project setup
 ```
 npm install
