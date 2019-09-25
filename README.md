@@ -21,7 +21,7 @@ Fichier server.js (en remplacement de `app.use(cors())`, déplacé au dessus de
 // ces lignes (cors) sont importantes pour les sessions dans la version de développement
 app.use(cors({
   credentials: true,
-  origin: 'http://localhost:8080'
+  origin: 'http://localhost:8080' // si votre port est différent, changez cette valeur !
 }))
 ```
 
