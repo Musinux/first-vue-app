@@ -1,7 +1,8 @@
 # my-nth-test-app
 
+## MISE EN PROD
 
-Allez regarder le fichier mise-en-prod.md pour les détails concernant la mise en prod
+Allez regarder le fichier [mise-en-prod.md](mise-en-prod.md) pour les détails concernant la mise en prod
 
 ## Gestion des sessions lors du développement
 
