@@ -24,7 +24,7 @@ git commit -m "add new version"
 4) Dans votre fichier package.json, après la ligne `"lint": "vue-cli-service lint"`,
 ajoutez la ligne suivante:
 ```js
-"script": "node server.js"
+"start": "node server.js"
 ```
 n'oubliez pas de mettre une virgule à la fin de la ligne précédente
 
