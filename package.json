@@ -19,7 +19,7 @@
     "morgan": "^1.9.1",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
-    "vuetify": "^2.0.0"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
